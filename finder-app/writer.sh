@@ -1,10 +1,11 @@
 #!/bin/sh
-# @brief writestr.sh - simple script to find the number of files in the directory *filesdir*
-#  and the number of matches for the *searchstr*.
+# @brief writestr.sh - simple script to write a string, *writestr*, to a file: *writefile*
+# 
 #
 # -Prints error messages if rguments are not at least the required 2
-# -Prints error message if *filesdir* is not a directory
-# -Prints a message with results if no errors
+# -Prints error message if the full path to *writefile* can't be created
+# -Prints error message if the file can not be created
+# -Prints error message if the file can not be udpated
 #
 
 #DEBUG=
