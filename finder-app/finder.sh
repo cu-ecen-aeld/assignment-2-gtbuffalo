@@ -1,6 +1,11 @@
 #!/bin/sh
 # @brief finder.sh - simple script to find the number of files in the directory *filesdir*
 #  and the number of matches for the *searchstr*.
+#
+# -Prints error messages if rguments are not at least the required 2
+# -Prints error message if *filesdir* is not a directory
+# -Prints a message with results if no errors
+#
 
 #DEBUG=
 
@@ -17,6 +22,17 @@ else
     then
       echo "DEBUG: filesdir=${filesdir}"
       echo "DEBUG: searchstr=${searchstr}"
+    fi
+
+    if [ -d "$filesdir" ]
+    then
+        if [ $DEBUG ]
+        then
+            echo "DEBUG: filesdir, ${filesdir}, exists!"
+        fi
+    else
+        echo "\nERROR: ${filesdir} does not represent a directory on the filesystem\n"
+        exit 1 
     fi
 fi
 
