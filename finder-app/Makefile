@@ -1,6 +1,6 @@
 CROSS_COMPILE=
 
-.DEFAULT: 
+writer:
 	$(CROSS_COMPILE)gcc writer.c -o writer
 
 
